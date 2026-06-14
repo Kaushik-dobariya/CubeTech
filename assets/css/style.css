@@ -10503,7 +10503,8 @@ a.text-theme:hover,
   right: 0;
   width: 1px;
   height: 600px;
-  background-color: var(--bs-border-color5);
+  background-color: unset;
+  /* background-color: var(--bs-border-color5); */
   /* Large devices */
   /* Medium devices */
 }
