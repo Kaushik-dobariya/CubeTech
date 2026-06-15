@@ -1921,3 +1921,15 @@ JS TABLE OF CONTENTS
 
 
 })(jQuery);
+
+// Manual counter js use this to update Counter number on any page.
+window.addEventListener('DOMContentLoaded', function () {
+    myFunction();
+});
+function myFunction() {
+    const element = document.getElementById('counter');
+
+    if (element) {
+        element.innerText = '2500';
+    }
+}
