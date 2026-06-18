@@ -1924,12 +1924,53 @@ JS TABLE OF CONTENTS
 
 // Manual counter js use this to update Counter number on any page.
 window.addEventListener('DOMContentLoaded', function () {
-    myFunction();
+   
+animateCounter();
 });
-function myFunction() {
+// function animateCounter() {
+	
+//     const element = document.getElementById('counter');
+
+//     if (element) {
+//         element.innerText = '2500';
+//     }
+// }
+function animateCounter() {
+    let count = 0;
+    const target = 3750;
     const element = document.getElementById('counter');
 
-    if (element) {
-        element.innerText = '2500';
-    }
+    if (!element) return;
+
+    const interval = setInterval(() => {
+        count += 25; // speed
+
+        if (count >= target) {
+            count = target;
+            clearInterval(interval);
+        }
+
+        element.textContent = count.toLocaleString();
+    }, 20);
 }
+
+
+						// let count = 128547;
+                        // let target = element.inntererText ? parseInt(element.innerText.replace(/,/g, '')) : 2500;
+
+                        // function animateCounter() {
+                        //     const counter = document.getElementById("counter");
+
+                        //     const interval = setInterval(() => {
+                        //         count += Math.floor(Math.random() * 5) + 1;
+
+                        //         if (count >= target) {
+                        //             count = target;
+                        //             clearInterval(interval);
+                        //         }
+
+                        //         counter.textContent = count.toString().padStart(6, '0');
+                        //     }, 30);
+                        // }
+
+                       
