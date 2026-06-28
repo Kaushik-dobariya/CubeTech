@@ -60,12 +60,19 @@
    
     <link rel="canonical" href="https://cubeontechs.com/">
    
+
+    <link rel="preload" as="image" href="assets/images/hero/hm6-bg2.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="assets/logoes/white.webp">
     <!--==============================
 	  Google Fonts
 	============================== -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap">
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
 
     <!--==============================
 	    All CSS File
@@ -85,7 +92,15 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FGVXJ421QR"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-FGVXJ421QR"></script> -->
+    <script>
+        window.addEventListener("load", function(){
+        var s=document.createElement("script");
+        s.src="https://www.googletagmanager.com/gtag/js?id=G-FGVXJ421QR";
+        s.async=true;
+        document.body.appendChild(s);
+        });
+    </script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -118,7 +133,7 @@
                     <div class="top-left">
                         <ul class="list-style-1">
                             <li><i class="fa-regular fa-house"></i>721,The Gateways Business Park, Ahmedabad, Gujarat, India.</li>
-                            <li><a href="mailto:Support@cubeontechs.com"><i class="icon fa-regular fa-envelope"></i>Support</a></li>
+                            <li><a href="mailto:Support@cubeontechs.com"><i class="icon fa-regular fa-envelope"></i>Click here for Support</a></li>
                         </ul>
                     </div>
                     <div class="outer-box">
@@ -139,8 +154,8 @@
                         <div class="col-auto logo">
                             <div class="header-logo">
                                 <a href="index.html">
-                                    <img alt="logo" src="assets/logoes/white.webp">
-                                    <img alt="logo" src="assets/logoes/white.webp">
+                                    <img alt="logo" src="assets/logoes/white.webp" loading="lazy" decoding="async">
+                                    <img alt="logo" src="assets/logoes/white.webp" loading="lazy" decoding="async">
                                 </a>
                             </div>
                         </div>
@@ -245,9 +260,9 @@
         ============================== -->
         <div class="mobile-menu-wrapper">
             <div class="mobile-menu-area">
-                <button class="menu-toggle"><i class="fas fa-times"></i></button>
+                <button class="menu-toggle" name="menutog"><i class="fas fa-times"></i></button>
                 <div class="mobile-logo">
-                    <a href="index.html"><img alt="Pureflow" src="assets/logoes/white.webp"></a>
+                    <a href="index.html"><img alt="Pureflow" src="assets/logoes/white.webp" loading="lazy" decoding="async"></a>
                 </div>
                 <div class="mobile-menu">
                     <ul class="navigation clearfix">
@@ -299,8 +314,8 @@
                         <div class="col-auto logo">
                             <div class="header-logo">
                                 <a href="index.html">
-                                    <img alt="logo" src="assets/logoes/white.webp">
-                                    <img alt="logo" src="assets/logoes/white.webp">
+                                    <img alt="logo" src="assets/logoes/white.webp" loading="lazy" decoding="async">
+                                    <img alt="logo" src="assets/logoes/white.webp" loading="lazy" decoding="async">
                                 </a>
                             </div>
                         </div>
@@ -311,7 +326,7 @@
                                 </ul>
                             </nav>
                             <div class="navbar-right d-inline-flex d-lg-none">
-                                <button class="menu-toggle sidebar-btn" type="button">
+                                <button class="menu-toggle sidebar-btn" type="button" name="menusidebar">
                                     <span class="line"></span>
                                     <span class="line"></span>
                                     <span class="line"></span>
@@ -326,12 +341,12 @@
 
         <!-- Header Search -->
         <div class="search-popup">
-            <button class="close-search style-1"><i class="fa fa-times"></i></button>
-            <button class="close-search"><i class="fas fa-arrow-up"></i></button>
+            <button class="close-search style-1" name="closeSearch1"><i class="fa fa-times"></i></button>
+            <button class="close-search" name="Closesearch"><i class="fas fa-arrow-up"></i></button>
             <form method="post" action="#">
                 <div class="form-group">
                     <input id="search1" type="search" name="search-field" value="" placeholder="Search..." required="">
-                    <button type="submit"><i class="fa fa-search"></i></button>
+                    <button type="submit" name="submit"><i class="fa fa-search"></i></button>
                 </div>
             </form>
         </div>
@@ -341,7 +356,7 @@
         <div id="sidebar-area" class="sidebar">
             <div class="sidebar-overlay"></div>
             <div class="sidebar-wrapper">
-                <button class="sidebar-close-btn">
+                <button class="sidebar-close-btn" name="closeside">
                     <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="12.7px" viewBox="0 0 16 12.7" style="enable-background:new 0 0 16 12.7" xml:space="preserve">
                         <g>
                             <rect x="0" y="5.4" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -2.1569 7.5208)" width="16" height="2"></rect>
@@ -351,7 +366,7 @@
                 </button>
                 <div class="sidebar-content">
                     <div class="sidebar-logo">
-                        <a class="dark-logo" href="index.html"><img src="assets/logoes/white.webp" alt="logo"></a>
+                        <a class="dark-logo" href="index.html"><img src="assets/logoes/white.webp" alt="logo" loading="lazy" decoding="async"></a>
                     </div>
                     <div class="sidebar-menu-wrap"></div>
                     <div class="sidebar-about">
@@ -364,37 +379,37 @@
                     <div class="instafeed-wrapper">
                     <div class="insta-item">
                         <a href="https://www.instagram.com" target="_blank">
-                        <img src="assets/images/sidebar/sidebar1.jpeg" alt="Sidebar Image 1">
+                        <img src="assets/images/sidebar/sidebar1.jpeg" alt="Sidebar Image 1" loading="lazy" decoding="async">
                         <span class="overlay"><i class="fa-brands fa-instagram"></i></span>
                         </a>
                     </div>
                     <div class="insta-item">
                         <a href="https://www.instagram.com" target="_blank">
-                        <img src="assets/images/sidebar/sidebar-2.webp" alt="Sidebar Image 2">
+                        <img src="assets/images/sidebar/sidebar-2.webp" alt="Sidebar Image 2" loading="lazy" decoding="async">
                         <span class="overlay"><i class="fa-brands fa-instagram"></i></span>
                         </a>
                     </div>
                     <div class="insta-item">
                         <a href="https://www.instagram.com" target="_blank">
-                        <img src="assets/images/sidebar/sidebar-3.webp" alt="Sidebar Image 3">
+                        <img src="assets/images/sidebar/sidebar-3.webp" alt="Sidebar Image 3" loading="lazy" decoding="async">
                         <span class="overlay"><i class="fa-brands fa-instagram"></i></span>
                         </a>
                     </div>
                     <div class="insta-item">
                         <a href="https://www.instagram.com" target="_blank">
-                        <img src="assets/images/sidebar/sidebar-4.webp" alt="Sidebar Image 4">
+                        <img src="assets/images/sidebar/sidebar-4.webp" alt="Sidebar Image 4" loading="lazy" decoding="async">
                         <span class="overlay"><i class="fa-brands fa-instagram"></i></span>
                         </a>
                     </div>
                     <div class="insta-item">
                         <a href="https://www.instagram.com" target="_blank">
-                        <img src="assets/images/sidebar/sidebar-5.webp" alt="Sidebar Image 5">
+                        <img src="assets/images/sidebar/sidebar-5.webp" alt="Sidebar Image 5" loading="lazy" decoding="async">
                         <span class="overlay"><i class="fa-brands fa-instagram"></i></span>
                         </a>
                     </div>
                     <div class="insta-item">
                         <a href="https://www.instagram.com" target="_blank">
-                        <img src="assets/images/sidebar/sidebar-6.webp" alt="Sidebar Image 6">
+                        <img src="assets/images/sidebar/sidebar-6.webp" alt="Sidebar Image 6" loading="lazy" decoding="async">
                         <span class="overlay"><i class="fa-brands fa-instagram"></i></span>
                         </a>
                     </div>
@@ -404,7 +419,7 @@
                     <form class="newsletter-form" action="https://formspree.io/f/mzbnjrnb" method="post">
                         <div class="form-group">
                             <input type="email" name="email" class="email" value="" placeholder="Enter Your Email" autocomplete="on" required="">
-                            <button type="submit">
+                            <button type="submit" name="submit">
                                 <i class="far fa-paper-plane"></i>
                                 <span class="btn-title"></span>
                             </button>
@@ -434,12 +449,12 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide pageTurn">
                                 <div class="hero-area position-relative">
-                                    <div class="p-bottom-left wow slideInUp z-1"><img src="assets/images/hero/hm1-shape01.webp" alt="shapehero1"></div>
-                                    <div class="bg image" data-bg-src="assets/images/hero/hm6-bg2.webp"></div>
+                                    <div class="p-bottom-left wow slideInUp z-1"><img src="assets/images/hero/hm1-shape01.webp" alt="shapehero1" loading="lazy" decoding="async"></div>
+                                    <div class="bg image" style="background-image:url('assets/images/hero/hm6-bg2.webp')"></div>
                                     <div class="video-box">
                                         <div class="circle-box">
                                                 <a class="logo-box popup-video" href="" data-fancybox="video-gallery">
-                                                    <img src="assets/images/hero/spin-icon.webp" alt="Spin Icon">
+                                                    <img src="assets/images/hero/spin-icon.webp" alt="Spin Icon" loading="eager" fetchpriority="high">
                                                 </a>
                                                 <div class="text-inner" style="animation: 10s linear 0s infinite normal none running text-rotate;">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="192.5" height="192.5" viewBox="0 0 250.5 250.5">
@@ -456,11 +471,11 @@
                                             <div class="col-lg-12">
                                                 <div class="hero-content">
                                                     <span class="sub-title">
-                                                        <img src="assets/images/hero/check.webp" alt="..">Cubeon Technologies
+                                                        <img src="assets/images/hero/check.webp" alt="check" loading="lazy" decoding="async">Cubeon Technologies
                                                     </span>
                                                     <h3 class="hero-title text-white">Software<br><span>Services</span></h3>
                                                     <div class="text-icon position-relative">
-                                                        <div class="icon d-inline-block spin2"><img src="assets/images/icons/star.webp" alt="Star Icon"></div>
+                                                        <div class="icon d-inline-block spin2"><img src="assets/images/icons/star.webp" alt="Star Icon" loading="lazy" decoding="async"></div>
                                                         <p class="text">Cubeon Technologies is a full-service software development company <br>that improve efficiency and accelerate business growth.</p>
                                                     </div>
                                                     <a href="contact.html" class="theme-btn mt-40 br-30">
@@ -488,12 +503,12 @@
                             </div>
                             <div class="swiper-slide blurSkew">
                                 <div class="hero-area position-relative">
-                                    <div class="p-bottom-left wow slideInUp z-1"><img src="assets/images/hero/hm1-shape01.webp" alt="Shape Hero 1"></div>
+                                    <div class="p-bottom-left wow slideInUp z-1"><img src="assets/images/hero/hm1-shape01.webp" alt="Shape Hero 1" loading="lazy" decoding="async"></div>
                                     <div class="bg image" data-bg-src="assets/images/hero/hm1-bg02.webp"></div>
                                     <div class="video-box">
                                         <div class="circle-box">
                                                 <a class="logo-box popup-video" href="" data-fancybox="video-gallery">
-                                                    <img src="assets/images/hero/spin-icon.webp" alt="Spin Icon">
+                                                    <img src="assets/images/hero/spin-icon.webp" alt="Spin Icon" loading="lazy" decoding="async">
                                                 </a>
                                                 <div class="text-inner" style="animation: 10s linear 0s infinite normal none running text-rotate;">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="192.5" height="192.5" viewBox="0 0 250.5 250.5">
@@ -510,11 +525,11 @@
                                             <div class="col-lg-12">
                                                 <div class="hero-content">
                                                     <span class="sub-title">
-                                                        <img src="assets/images/hero/check.webp" alt="..">Cubeon Technologies
+                                                        <img src="assets/images/hero/check.webp" alt="check" loading="lazy" decoding="async">Cubeon Technologies
                                                     </span>
                                                     <h1 class="hero-title text-white">Digital <br><span>Transformation</span></h1>
                                                     <div class="text-icon position-relative">
-                                                        <div class="icon d-inline-block spin2"><img src="assets/images/icons/star.webp" alt="Star Icon"></div>
+                                                        <div class="icon d-inline-block spin2"><img src="assets/images/icons/star.webp" alt="Star Icon" loading="lazy" decoding="async"></div>
                                                         <p class="text">We help businesses improve efficiency, enhance security, and accelerate growth <br>with expert IT consulting solutions.</p>
                                                     </div>
                                                     <a href="contact.html" class="theme-btn mt-40 br-30">
@@ -562,9 +577,9 @@
                         <div class="tv-feature-item wow fadeInLeft" data-wow-delay=".5s">
                             <div class="client-social-proof">
                                 <div class="social">
-                                    <img src="assets/images/social/social-img01.webp" alt="Client 01">
-                                    <img src="assets/images/social/social-img02.webp" alt="Client 02">
-                                    <img src="assets/images/social/social-img03.webp" alt="Client 03">
+                                    <img src="assets/images/social/social-img01.webp" alt="Client 01" loading="lazy" decoding="async">
+                                    <img src="assets/images/social/social-img02.webp" alt="Client 02" loading="lazy" decoding="async">
+                                    <img src="assets/images/social/social-img03.webp" alt="Client 03" loading="lazy" decoding="async">
                                     <div class="counter-number">+100</div>
                                     
                                 </div>
@@ -587,7 +602,7 @@
                                     </span>
                                 </a>
                                 <div class="scribble-shape1 moving">
-                                    <img src="assets/images/feature/scribble.webp" alt="Scribble Shape">
+                                    <img src="assets/images/feature/scribble.webp" alt="Scribble Shape" loading="lazy" decoding="async">
                                 </div>
                             </div>
                         </div>
@@ -606,7 +621,7 @@
                                     </i>
                                 </div>
                             </div>
-                            <div class="logo mb-40"><img src="assets/images/feature/hm1-icon01.webp" alt="IT Consultancy Icon"></div>
+                            <div class="logo mb-40"><img src="assets/images/feature/hm1-icon01.webp" alt="IT Consultancy Icon" loading="lazy" decoding="async"></div>
                             <h2>IT Consultancy and <br>Management</h2>
                             <p>Our IT Consultancy and Management services help organizations align technology investments with business objectives.<br><br>We provide strategic guidance, infrastructure planning, technology modernization, process optimization, and digital roadmaps that improve operational efficiency, reduce costs, and support sustainable business growth.</p>
                         </div>
@@ -625,7 +640,7 @@
                                 </i>
                             </div>
                         </div>
-                        <div class="logo mb-40"><img src="assets/images/feature/hm1-icon02.webp" alt="Digital Transformation Icon"></div>
+                        <div class="logo mb-40"><img src="assets/images/feature/hm1-icon02.webp" alt="Digital Transformation Icon" loading="lazy" decoding="async"></div>
                         <h2>Digital Transformation <br>And Automation</h2>
                         <p>Cubeon Technologies helps businesses modernize legacy systems and automate repetitive processes through digital solutions. <br><br>Our digital transformation services improve productivity, operational agility, and enable organizations to scale efficiently using modern technologies and automation frameworks.</p>
                         </div>
@@ -650,7 +665,7 @@
                             </div>
                             <div class="image-box br-30 sm-br-0 overflow-hidden data-item-hover">
                                 <figure class="data-img-hover" data-style="01" data-intensity="0.2" data-speedin="1" data-speedout="1">
-                                    <img src="assets/images/about/hm1-img01.webp" alt="About Image">
+                                    <img src="assets/images/about/hm1-img01.webp" alt="About Image" loading="lazy" decoding="async">
                                 </figure>
                             </div>
                         </div>
@@ -658,7 +673,7 @@
                     <div class="col-lg-5">
                         <div class="about-right">
                             <div class="right-top">
-                                <img src="assets/images/about/HetalP.webp" alt="About Image">
+                                <img src="assets/images/about/HetalP.webp" alt="About Image" loading="lazy" decoding="async">
                                 <div class="text">
                                     <p class="team-name">Hetal Patel</p>
                                     <p>Co-Founder</p>
@@ -684,7 +699,7 @@
                             </a>
                             <div class="data-item-hover br-30 sm-br-0 overflow-hidden  mt-50">
                                 <figure class="image data-img-hover" data-intensity="0.2" data-speedin="1" data-speedout="1">
-                                    <img src="assets/images/about/hm1-img02.webp" alt="about image">
+                                    <img src="assets/images/about/hm1-img02.webp" alt="about image" loading="lazy" decoding="async">
                                 </figure>                                
                             </div>
                         </div>
@@ -702,7 +717,7 @@
         ==============================-->
         <section class="tv-service-section bg-light position-relative overflow-hidden">
             <div class="p-top-center z-1 wow slideInTop">
-                <img src="assets/images/service/hm1-shape-01.webp" alt="Service Shape">
+                <img src="assets/images/service/hm1-shape-01.webp" alt="Service Shape" loading="lazy" decoding="async">
             </div>
             <div class="tv-service-inner space bg-theme3 mx-30 ml-mx-0 overflow-hidden">
                 <div class="container">
@@ -729,7 +744,7 @@
                                                 </a>
                                             </div>
                                             <div class="overlay-anim4 overflow-hidden">
-                                                <img src="assets/images/service/hm1-img01.webp" alt="Team working">
+                                                <img src="assets/images/service/hm1-img01.webp" alt="Team working" loading="lazy" decoding="async">
                                             </div>
                                         </div>
                                         <div class="service-right">
@@ -759,7 +774,7 @@
                                             </a>
                                         </div>
                                         <div class="overlay-anim4 overflow-hidden">
-                                            <img src="assets/images/service/hm1-img02.webp" alt="Team working">
+                                            <img src="assets/images/service/hm1-img02.webp" alt="Team working" loading="lazy" decoding="async">
                                         </div>
                                     </div>
                                     <div class="service-right">
@@ -794,7 +809,7 @@
                                                 </a>
                                             </div>
                                             <div class="overlay-anim4 overflow-hidden">
-                                                <img src="assets/images/service/hm1-img03.webp" alt="Team working">
+                                                <img src="assets/images/service/hm1-img03.webp" alt="Team working" loading="lazy" decoding="async">
                                             </div>
                                         </div>
                                         <div class="service-right">
@@ -826,7 +841,7 @@
                                                 </a>
                                             </div>
                                             <div class="overlay-anim4 overflow-hidden">
-                                                <img src="assets/images/service/DMHome.webp" alt="Team working">
+                                                <img src="assets/images/service/DMHome.webp" alt="Team working" loading="lazy" decoding="async">
                                             </div>
                                         </div>
                                         <div class="service-right">
@@ -859,7 +874,7 @@
                                                 </a>
                                             </div>
                                             <div class="overlay-anim4 overflow-hidden">
-                                                <img src="assets/images/service/DEhome.webp" alt="Team working">
+                                                <img src="assets/images/service/DEhome.webp" alt="Team working" loading="lazy" decoding="async">
                                             </div>
                                         </div>
                                         <div class="service-right">
@@ -893,7 +908,7 @@
                                                 </a>
                                             </div>
                                             <div class="overlay-anim4 overflow-hidden">
-                                                <img src="assets/images/service/manpower.webp" alt="Team working">
+                                                <img src="assets/images/service/manpower.webp" alt="Team working" loading="lazy" decoding="async">
                                             </div>
                                         </div>
                                         <div class="service-right">
@@ -952,7 +967,7 @@
                             <div class="tv-choose-boxs">
                                 <div class="tv-choose-single-box two wow fadeInLeft" data-wow-delay=".3s">
                                     <div class="box-top-content mb-20">
-                                        <div class="icon-top"><img src="assets/images/choose/hm1-icon01.webp" alt="Cutting-Edge Technology Icon"></div>
+                                        <div class="icon-top"><img src="assets/images/choose/hm1-icon01.webp" alt="Cutting-Edge Technology Icon" loading="lazy" decoding="async"></div>
                                         <h3 class="title">Cutting-Edge Technology</h3   >
                                     </div>
                                     <p>We combine technology expertise, innovation, and customer-focused solutions to deliver reliable results that drive business success.</p>
@@ -974,7 +989,7 @@
                                 </div>
                                 <div class="tv-choose-single-box wow fadeInRight" data-wow-delay=".5s">
                                     <div class="box-top-content mb-20">
-                                        <div class="icon-top"><img src="assets/images/choose/hm1-icon02.webp" alt="Proven Client Satisfaction Icon"></div>
+                                        <div class="icon-top"><img src="assets/images/choose/hm1-icon02.webp" alt="Proven Client Satisfaction Icon" loading="lazy" decoding="async"></div>
                                         <h3 class="title">Proven Client Satisfaction</h3>
                                     </div>
                                     <p>Our proven process includes consultation, planning, implementation, and continuous support to ensure successful project delivery.</p>
@@ -1017,15 +1032,15 @@
                        <div class="tv-choose-right-box">
                             <div class="data-item-hover">
                                 <figure class="image_right data-img-hover" data-style="08" data-intensity="0.2" data-speedin="1" data-speedout="1">
-                                    <img src="assets/images/about/hm1-choose-img01.webp" alt="Agency Image">
+                                    <img src="assets/images/about/hm1-choose-img01.webp" alt="Agency Image" loading="lazy" decoding="async">
                                 </figure>
                             </div>
 
 							<div class="text_right">
 								<div class="content">
-									<div class="icon"><img src="assets/images/choose/star.webp" alt="Star Icon"></div>
+									<div class="icon"><img src="assets/images/choose/star.webp" alt="Star Icon" loading="lazy" decoding="async"></div>
 									<h3 class="title">Best <br>Agency<br>of the year</h3>
-									<div class="arrow"><img src="assets/images/choose/arrow.webp" alt="Arrow Icon"></div>
+									<div class="arrow"><img src="assets/images/choose/arrow.webp" alt="Arrow Icon" loading="lazy" decoding="async"></div>
 									<span class="year">2025</span>
 								</div>
 							</div>
@@ -1048,14 +1063,14 @@
                 <div class="container-fluid p-0 overflow-hidden">
                     <div class="slider__marquee clearfix marquee-wrap">
                         <ul class="marquee_mode marquee__group">
-                            <li class="item m-item"><img class="icon" src="assets/images/icons/marquee-icon.webp" alt="Enterprise Solutions Icon"> Enterprise Solutions services</li>
-                            <li class="item m-item"><img class="icon" src="assets/images/icons/marquee-icon.webp" alt="Mobile App Solutions Icon"> Mobile App Solutions services</li>
-                            <li class="item m-item"><img class="icon" src="assets/images/icons/marquee-icon.webp" alt="Custom Website Icon"> CMS Development Services</li>
-                            <li class="item m-item"><img class="icon" src="assets/images/icons/marquee-icon.webp" alt="Innovation Design Icon"> UI/UX Design Services</li>
-                            <li class="item m-item"><img class="icon" src="assets/images/icons/marquee-icon.webp" alt="Data Engineering Icon"> Data Engineering Services</li>
-                            <li class="item m-item"><img class="icon" src="assets/images/icons/marquee-icon.webp" alt="Scraping Services Icon"> Data Scraping Services</li>
-                            <li class="item m-item"><img class="icon" src="assets/images/icons/marquee-icon.webp" alt="Digital Marketing Icon"> Digital Marketing Services</li>
-                            <li class="item m-item"><img class="icon" src="assets/images/icons/marquee-icon.webp" alt="Enterprise Solutions Icon"> IT Staff Augmentation services</li>
+                            <li class="item m-item"><img class="icon" src="assets/images/icons/marquee-icon.webp" alt="Enterprise Solutions Icon" loading="lazy" decoding="async"> Enterprise Solutions services</li>
+                            <li class="item m-item"><img class="icon" src="assets/images/icons/marquee-icon.webp" alt="Mobile App Solutions Icon" loading="lazy" decoding="async"> Mobile App Solutions services</li>
+                            <li class="item m-item"><img class="icon" src="assets/images/icons/marquee-icon.webp" alt="Custom Website Icon" loading="lazy" decoding="async"> CMS Development Services</li>
+                            <li class="item m-item"><img class="icon" src="assets/images/icons/marquee-icon.webp" alt="Innovation Design Icon" loading="lazy" decoding="async"> UI/UX Design Services</li>
+                            <li class="item m-item"><img class="icon" src="assets/images/icons/marquee-icon.webp" alt="Data Engineering Icon" loading="lazy" decoding="async"> Data Engineering Services</li>
+                            <li class="item m-item"><img class="icon" src="assets/images/icons/marquee-icon.webp" alt="Scraping Services Icon" loading="lazy" decoding="async"> Data Scraping Services</li>
+                            <li class="item m-item"><img class="icon" src="assets/images/icons/marquee-icon.webp" alt="Digital Marketing Icon" loading="lazy" decoding="async"> Digital Marketing Services</li>
+                            <li class="item m-item"><img class="icon" src="assets/images/icons/marquee-icon.webp" alt="Enterprise Solutions Icon" loading="lazy" decoding="async"> IT Staff Augmentation services</li>
 
                         </ul>
                     </div>
@@ -1071,7 +1086,7 @@
         ==============================-->
         <section class="tv-process-section bg-light position-relative">
             <div class="p-top-center z-1 wow slideInTop">
-                <img src="assets/images/process/hm1-shape01.webp" alt="Process Shape">
+                <img src="assets/images/process/hm1-shape01.webp" alt="Process Shape" loading="lazy" decoding="async">
             </div>
             <div class="process-inner bg-theme3 mx-30 ml-mx-0 space  overflow-hidden xxl-br-0 position-relative">
                 <div class="container position-relative">
@@ -1088,7 +1103,7 @@
                             <div class="tv-process-item wow fadeInRightBig" data-wow-delay=".2s">
                                 <h3 class="title-text">STEP 01</h3>
                                 <div class="process-box">
-                                    <div class="icon"><img src="assets/images/process/hm1-icon1.webp" alt="Consult Icon"></div>
+                                    <div class="icon"><img src="assets/images/process/hm1-icon1.webp" alt="Consult Icon" loading="lazy" decoding="async"></div>
                                     <h3 class="title">Consult Understand</h3>
                                     <p>We analyze requirements, understand goals, and define project scope.</p>
                                 </div>
@@ -1098,7 +1113,7 @@
                             <div class="tv-process-item wow fadeInRightBig" data-wow-delay=".3s">
                                 <h3 class="title-text">STEP 02</h3>
                                 <div class="process-box">
-                                    <div class="icon"><img src="assets/images/process/hm1-icon2.webp" alt="Plan Icon"></div>
+                                    <div class="icon"><img src="assets/images/process/hm1-icon2.webp" alt="Plan Icon" loading="lazy" decoding="async"></div>
                                     <h3 class="title">Plan Strategize</h3>
                                     <p>Establish project vision, prioritize features, allocate resources, ensure alignment.</p>
                                 </div>
@@ -1108,7 +1123,7 @@
                             <div class="tv-process-item  wow fadeInRightBig" data-wow-delay=".4s">
                                 <h3 class="title-text">STEP 03</h3>
                                 <div class="process-box">
-                                    <div class="icon"><img src="assets/images/process/hm1-icon3.webp" alt="Implement Icon"></div>
+                                    <div class="icon"><img src="assets/images/process/hm1-icon3.webp" alt="Implement Icon" loading="lazy" decoding="async"></div>
                                     <h3 class="title">Implement Execute</h3>
                                     <p>Transform approved designs into functional software through disciplined execution.</p>
                                 </div>
@@ -1118,7 +1133,7 @@
                             <div class="tv-process-item wow fadeInRightBig" data-wow-delay=".5s">
                                 <h3 class="title-text">STEP 04</h3>
                                 <div class="process-box">
-                                    <div class="icon"><img src="assets/images/process/hm1-icon4.webp" alt="Support Icon"></div>
+                                    <div class="icon"><img src="assets/images/process/hm1-icon4.webp" alt="Support Icon" loading="lazy" decoding="async"></div>
                                     <h3 class="title">Support Optimize</h3>
                                     <p>Provide continuous support, troubleshoot issues, and optimize system performance.</p>
                                 </div>
@@ -1171,7 +1186,7 @@
                     <div class="col-lg-6">
                         <div class="tv-portfolio-box style-2">
                                 <div class="box-image">
-                                    <img src="assets/images/project/ERP_new.webp" alt="ERPNext">
+                                    <img src="assets/images/project/ERP_new.webp" alt="ERPNext" loading="lazy" decoding="async">
                                 </div>
                             <div class="box-content">
                                 <h3><a href="best-erp-software.html">ERP</a></h3>
@@ -1187,7 +1202,7 @@
                         </div>
                         <div class="tv-portfolio-box style-2 my-25">
                                 <div class="box-image">
-                                    <img src="assets/images/project/CRM_New.webp" alt="CRM">
+                                    <img src="assets/images/project/CRM_New.webp" alt="CRM" loading="lazy" decoding="async">
                                 </div>
                             <div class="box-content">
                                 <h3><a href="best-cloud-based-crm-software.html">CRM</a></h3>
@@ -1203,7 +1218,7 @@
                         </div>
                         <div class="tv-portfolio-box style-2 my-25">
                                 <div class="box-image">
-                                    <img src="assets/images/project/LMS_New.webp" alt="LMS">
+                                    <img src="assets/images/project/LMS_New.webp" alt="LMS" loading="lazy" decoding="async">
                                 </div>
                             <div class="box-content">
                                 <h3><a href="best-learning-management-system.html">LEARNING MANAGEMENT SYSTEM</a></h3>
@@ -1219,7 +1234,7 @@
                         </div> 
                         <div class="tv-portfolio-box style-2 my-25">
                                 <div class="box-image">
-                                    <img src="assets/images/project/HRMS_New.webp" alt="HRMS">
+                                    <img src="assets/images/project/HRMS_New.webp" alt="HRMS" loading="lazy" decoding="async">
                                 </div>
                             <div class="box-content">
                                 <h3><a href="best-hrms-software.html">HR MANAGEMENT SYSTEM</a></h3>
@@ -1251,7 +1266,7 @@
         ==============================-->
         <section class="tv-contact-section bg-light md-pb-80">
             <div class="tv-contact-inner bg-theme3 mx-30 ml-mx-0 position-relative overflow-hidden br-30 ml-br-0 space">
-                <div class="shape-mockup z-1 scribble d-none d-xxl-block" data-right="44%" data-bottom="66%"><img src="assets/images/contact/hm1-scribble01.webp" alt="..."></div>
+                <div class="shape-mockup z-1 scribble d-none d-xxl-block" data-right="44%" data-bottom="66%"><img src="assets/images/contact/hm1-scribble01.webp" loading="lazy" decoding="async" alt="..."></div>
                 <div class="container">
                     <div class="row align-items-end gy-30">
                         <div class="col-lg-6">
@@ -1288,7 +1303,7 @@
                                     <div class="form-group">
                                         <textarea id="message" name="message" placeholder="Write Message" required></textarea>
                                     </div>
-                                    <button type="submit" class="theme-btn"  data-loading-text="Please wait...">
+                                    <button type="submit" class="theme-btn"  data-loading-text="Please wait..." name="submit">
                                             <span class="btn-title mr-10">Send Message</span>
                                             <i class="fa-solid fa-arrow-right"></i>
                                     </button>
@@ -1297,13 +1312,13 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="choose-image-wrapper">
-                                <div class="thumb-bg spin2"><img src="assets/images/contact/hm1-shape01.webp" alt="Shape"></div>
+                                <div class="thumb-bg spin2"><img src="assets/images/contact/hm1-shape01.webp" alt="Shape" loading="lazy" decoding="async"></div>
                                 <div class="thumb">
-                                    <img class="wow img-anim-right" src="assets/images/contact/hm1-img01.webp" alt="Contact Image">
+                                    <img class="wow img-anim-right" src="assets/images/contact/hm1-img01.webp" alt="Contact Image" loading="lazy" decoding="async">
                                 </div>
                                 <div class="info-card">
                                     <div class="info-icon">
-                                        <img src="assets/images/contact/hm1-icon01.webp" alt="Call Icon">
+                                        <img src="assets/images/contact/hm1-icon01.webp" alt="Call Icon" loading="lazy" decoding="async">
                                     </div>
                                     <div class="info-text">
                                         <p>Call us anytime</p>
@@ -1314,7 +1329,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="p-bottom-left wow slideInUp xs-d-none"><img src="assets/images/contact/hm1-shape02.webp" alt="Shape"></div>
+                <div class="p-bottom-left wow slideInUp xs-d-none"><img src="assets/images/contact/hm1-shape02.webp" alt="Shape" loading="lazy" decoding="async"></div>
             </div>
         </section>
 
@@ -1336,7 +1351,7 @@
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
                         <div class="tv-team-card wow fadeInUp" data-wow-delay=".2s">
                             <div class="team-photo">
-                                <img src="assets/images/team/hp.webp" alt="Jobaer Khanom">
+                                <img src="assets/images/team/hp.webp" alt="Himanshu" loading="lazy" decoding="async">
                                 <div class="team-social">
                                     <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                                     <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
@@ -1355,7 +1370,7 @@
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
                         <div class="tv-team-card wow fadeInUp" data-wow-delay=".4s">
                             <div class="team-photo">
-                            <img src="assets/images/team/Ashish.webp" alt="Sayma D. Farna">
+                            <img src="assets/images/team/Ashish.webp" alt="Ashish" loading="lazy" decoding="async">
                             <div class="team-social">
                                 <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                                 <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
@@ -1373,7 +1388,7 @@
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
                         <div class="tv-team-card wow fadeInUp" data-wow-delay=".6s">
                             <div class="team-photo">
-                            <img src="assets/images/team/KS.webp" alt="Jubin E. Nawtail">
+                            <img src="assets/images/team/KS.webp" alt="Sharan" loading="lazy" decoding="async">
                             <div class="team-social">
                                 <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                                 <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
@@ -1401,7 +1416,7 @@
         ==============================-->
         <section class="tv-testimonial-section bg-light overflow-hidden">
             <div class="tv-testi-inner br-30 ml-br-0 space position-relative mx-30 xxl-mx-0 overflow-hidden">
-                <div class="bg image"><img src="assets/images/testimonial/hm1-bg01.webp" alt="Testimonial Background"></div>
+                <div class="bg image"><img src="assets/images/testimonial/hm1-bg01.webp" alt="Testimonial Background" loading="lazy" decoding="async"></div>
                     <div class="container">
                         <!-- Section Title -->
                         <div class="row">
@@ -1413,12 +1428,12 @@
                                     </div>
                                     <div class="testimonial-btn-wrapper">
                                         <div class="scribble-shape scribble md-d-none">
-                                            <img src="assets/images/testimonial/scribble01.webp" alt="Scribble Shape">
+                                            <img src="assets/images/testimonial/scribble01.webp" alt="Scribble Shape" loading="lazy" decoding="async">
                                         </div>
                                         <div class="client-social-proof">
                                             <div class="social">
-                                                <img src="assets/images/social/social-img02.webp" alt="Client 02">
-                                                <img src="assets/images/social/social-img03.webp" alt="Client 03">
+                                                <img src="assets/images/social/social-img02.webp" alt="Client 02" loading="lazy" decoding="async">
+                                                <img src="assets/images/social/social-img03.webp" alt="Client 03" loading="lazy" decoding="async">
                                                 <div class="counter-number">+100</div>
                                             </div>
                                             <h3 class="text">Trusted Clients <br> Worldwide</h3>
@@ -1518,7 +1533,7 @@
                                             <div class="tv-testi-card wow fadeInUp" data-wow-delay=".5s">
                                                 <div class="testi-top">
                                                     <div class="image position-relative z-1">
-														<img src="assets/images/testimonial/hm1-testi01.webp" alt="User">
+														<img src="assets/images/testimonial/hm1-testi01.webp" alt="User" loading="lazy" decoding="async">
                                                     	<span class="quote-icon"><i class="fa-solid fa-quote-left"></i></span>
 													</div>
                                                     <div class="testi-info">
@@ -1544,7 +1559,7 @@
                                             <div class="tv-testi-card wow fadeInUp" data-wow-delay=".7s">
                                                 <div class="testi-top">
                                                     <div class="image position-relative z-1">
-														<img src="assets/images/testimonial/hm1-testi04.webp" alt="User">
+														<img src="assets/images/testimonial/hm1-testi04.webp" alt="User" loading="lazy" decoding="async">
                                                     	<span class="quote-icon"><i class="fa-solid fa-quote-left"></i></span>
 													</div>
                                                     <div class="testi-info">
@@ -1570,7 +1585,7 @@
                                             <div class="tv-testi-card wow fadeInUp" data-wow-delay=".9s">
                                                 <div class="testi-top">
                                                     <div class="image position-relative z-1">
-														<img src="assets/images/testimonial/hm1-testi05.webp" alt="User">
+														<img src="assets/images/testimonial/hm1-testi05.webp" alt="User" loading="lazy" decoding="async">
                                                     	<span class="quote-icon"><i class="fa-solid fa-quote-left"></i></span>
 													</div>
                                                     <div class="testi-info">
@@ -1597,7 +1612,7 @@
                                             <div class="tv-testi-card wow fadeInUp" data-wow-delay=".5s">
                                                 <div class="testi-top">
                                                     <div class="image position-relative z-1">
-														<img src="assets/images/testimonial/hm1-testi02.webp" alt="User">
+														<img src="assets/images/testimonial/hm1-testi02.webp" alt="User" loading="lazy" decoding="async">
                                                     	<span class="quote-icon"><i class="fa-solid fa-quote-left"></i></span>
 													</div>
                                                     <div class="testi-info">
@@ -1623,7 +1638,7 @@
                                             <div class="tv-testi-card wow fadeInUp" data-wow-delay=".7s">
                                                 <div class="testi-top">
                                                     <div class="image position-relative z-1">
-														<img src="assets/images/testimonial/hm1-testi03.webp" alt="User">
+														<img src="assets/images/testimonial/hm1-testi03.webp" alt="User" loading="lazy" decoding="async">
                                                     	<span class="quote-icon"><i class="fa-solid fa-quote-left"></i></span>
 													</div>
                                                     <div class="testi-info">
@@ -1649,7 +1664,7 @@
                                             <div class="tv-testi-card wow fadeInUp" data-wow-delay=".9s">
                                                 <div class="testi-top">
                                                     <div class="image position-relative z-1">
-														<img src="assets/images/testimonial/hm1-testi06.webp" alt="User">
+														<img src="assets/images/testimonial/hm1-testi06.webp" alt="User" loading="lazy" decoding="async">
                                                     	<span class="quote-icon"><i class="fa-solid fa-quote-left"></i></span>
 													</div>
                                                     <div class="testi-info">
@@ -1804,13 +1819,13 @@
        
             <div class="tv-counter-section style-2 bg-light position-relative z-1">
                 <div class="counter-inner lg-br-0 py-65 lg-py-40 position-relative mx-30 xxl-mx-0 overflow-hidden">
-                    <div class="bg image"><img src="assets/images/counter/hm1-bg01.webp" alt="Counter Background"></div>
+                    <div class="bg image"><img src="assets/images/counter/hm1-bg01.webp" alt="Counter Background" loading="lazy" decoding="async"></div>
                     <div class="overlay bg-theme mbm-overlay"></div>
                     <div class="container">
                         <div class="row gy-30">
                             <div class="col-lg-4 col-md-6">
                                 <div class="counter-box">
-                                    <div class="icon"><img src="assets/images/counter/hm1-icon01.webp" alt="Icon"></div>
+                                    <div class="icon"><img src="assets/images/counter/hm1-icon01.webp" alt="Icon" loading="lazy" decoding="async"></div>
                                     <div class="content">
                                         <h4 class="title mb-0"><span class="count-number odometer" data-count="50">50</span>+</h4>
                                         <p class="text mb-0" style="color: whitesmoke !important;">Successful Projects</p>
@@ -1819,7 +1834,7 @@
                             </div>
                             <div class="col-lg-4 col-md-6">
                                 <div class="counter-box justify-content-center ustify-content-md-center">
-                                    <div class="icon"><img src="assets/images/counter/hm1-icon02.webp" alt="Icon"></div>
+                                    <div class="icon"><img src="assets/images/counter/hm1-icon02.webp" alt="Icon" loading="lazy" decoding="async"></div>
                                     <div class="content">
                                         <h4 class="title mb-0"><span class="count-number odometer" data-count="5">5</span></h4>
                                         <p class="text mb-0" style="color: whitesmoke !important;">All Awards Winning</p>
@@ -1828,7 +1843,7 @@
                             </div>
                             <div class="col-lg-4 col-md-6">
                                 <div class="counter-box align-items-start align-items-lg-end">
-                                    <div class="icon"><img src="assets/images/counter/hm1-icon03.webp" alt="Icon"></div>
+                                    <div class="icon"><img src="assets/images/counter/hm1-icon03.webp" alt="Icon" loading="lazy" decoding="async"></div>
                                     <div class="content">
                                         <h4 class="title mb-0"><span class="count-number odometer" data-count="96">0</span>%</h4>
                                         <p class="text mb-0" style="color: whitesmoke !important;">Satisfaction Rates</p>
@@ -1844,7 +1859,7 @@
         ==============================-->
         <section class="tv-callus-section bg-light">
             <div class="callus-inner space position-relative mx-30 xxl-mx-0 overflow-hidden">
-                <div class="bg image"><img src="assets/images/callus/hm1-bg01.webp" alt="Call Us Background"></div>
+                <div class="bg image"><img src="assets/images/callus/hm1-bg01.webp" alt="Call Us Background" loading="lazy" decoding="async"></div>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
@@ -1871,7 +1886,7 @@
                                 </a>
                                 <div class="inner-contact">
                                     <div class="icon">
-                                        <img src="assets/images/callus/call-iocn.webp" alt="Call Icon">
+                                        <img src="assets/images/callus/call-iocn.webp" alt="Call Icon" loading="lazy" decoding="async">
                                     </div>
                                     <div class="content">
                                         <p class="call-text">Need Help?</p>
@@ -1907,7 +1922,7 @@
                         <article class="blog-single-box">
                             <div class="inner-box">
                                 <div class="blog-image">
-                                    <img src="assets/images/blog/blog01.webp" alt="Blog Image">
+                                    <img src="assets/images/blog/blog01.webp" alt="Blog Image" loading="lazy" decoding="async">
                                     <div class="category-tag"><span></span>29 May, 2026</div>
                                 </div>
                                 <div class="blog-content">
@@ -1921,42 +1936,7 @@
                             </div>
                         </article>
                     </div>
-                    <!-- <div class="col-lg-4 col-md-6 col-sm-6">
-                        <article class="blog-single-box">
-                            <div class="inner-box">
-                                <div class="blog-image">
-                                    <img src="assets/images/blog/blog02.webp" alt="Blog Image">
-                                    <div class="category-tag"><span></span>17 Aug, 2025</div>
-                                </div>
-                                <div class="blog-content">
-                                    <h3 class="title"><a href="blog-details.html">Business Growing Tips for <br> Sales Globally</a></h3>
-                                    <div class="pt-25 pb-30"><div class="border dark"></div></div>
-                                    <div class="blog-meta">
-                                        <a href="blog-details.html" class="continue-reading">Explore More</a>
-                                    <span>(5) Comments</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <article class="blog-single-box">
-                            <div class="inner-box">
-                                <div class="blog-image">
-                                    <img src="assets/images/blog/blog03.webp" alt="Blog Image">
-                                    <div class="category-tag"><span></span>29 Aug, 2025</div>
-                                </div>
-                                <div class="blog-content">
-                                    <h3 class="title"><a href="blog-details.html">Installation Sales Navigator <br>Extension on Chrome</a></h3>
-                                    <div class="pt-25 pb-30"><div class="border dark"></div></div>
-                                    <div class="blog-meta">
-                                        <a href="blog-details.html" class="continue-reading">Explore More</a>
-                                        <span>(7) Comments</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                    </div> -->
+                   
                     </div>
                 </div>
         </section>
@@ -1971,19 +1951,19 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="newsletter">
-                            <div class="arrow-shape md-d-none"><img src="assets/images/newsletter/arrow-shape.webp" alt="Arrow Shape"></div>
+                            <div class="arrow-shape md-d-none"><img src="assets/images/newsletter/arrow-shape.webp" alt="Arrow Shape" loading="lazy" decoding="async"></div>
                             <div class="bg image"><img class="br-30" src="assets/images/newsletter/hm1-bg01.webp" alt="Newsletter Background"></div>
                             <div class="thumb d-none d-xl-block">
-                                <img src="assets/images/newsletter/img01.webp" alt="Newsletter Thumb">
+                                <img src="assets/images/newsletter/img01.webp" alt="Newsletter Thumb" loading="lazy" decoding="async">
                              </div>
                              <div class="image-text">
-                                <img src="assets/images/icons/check-circle2.webp" alt="Check Circle">
+                                <img src="assets/images/icons/check-circle2.webp" alt="Check Circle" loading="lazy" decoding="async">
                                 <h3 class="title title-anim" data-animation="bounce-in">Subscribe Our Newsletter <br> For Latest Updates</h3>
                              </div>
                                 <form class="newsletter-form" action="https://formspree.io/f/mzbnjrnb" method="post">
                                     <div class="form-group">
                                         <input type="email" name="email" class="email" value="" placeholder="Email Address" autocomplete="on" required="">
-                                        <button type="submit">
+                                        <button type="submit" name="submit">
                                             <i class="far fa-paper-plane"></i>
                                             <span class="btn-title"></span>
                                         </button>
@@ -2000,7 +1980,7 @@
         Footer Section
         ==============================-->
        <footer class="footer-section z-1 br-30 xxl-br-0 pt-75 bg-dark position-relative mx-30 mb-30 xxl-m-0 overflow-hidden">
-            <div class="bg image mbm-screen"><img src="assets/images/footer/hm1-bg01.webp" alt="Footer Background"></div>
+            <div class="bg image mbm-screen"><img src="assets/images/footer/hm1-bg01.webp" alt="Footer Background" loading="lazy" decoding="async"></div>
             <div class="footer-top space">
                 <div class="container">
                     <div class="row">
@@ -2063,7 +2043,7 @@
                                             
                                         </p>
                                         <div class="footer-msme" style="margin-top: 10px !important;">
-                                                <img src="assets/Logoes/msme1.webp" alt="MSME Registered Company">
+                                                <img src="assets/Logoes/msme1.webp" alt="MSME Registered Company" loading="lazy" decoding="async">
                                                 <div class="msme-content">
                                                     <span class="msme-title">MSME Registered Company</span>
                                                     <!-- <span class="msme-number">UDYAM-GJ-XX-XXXXXXXX</span> -->
@@ -2130,7 +2110,7 @@
                                             <h3 class="title">Latest Blog</h3>
                                             <div class="recent-post-item">
                                                 <figure class="image">
-                                                    <a href="data-scraping-engineering-business-case-study-2026.html"><img src="assets/images/footer/gallery-1.webp" alt="Latest Blog Image"></a>
+                                                    <a href="data-scraping-engineering-business-case-study-2026.html"><img src="assets/images/footer/gallery-1.webp" loading="lazy" decoding="async" alt="Latest Blog Image"></a>
                                                 </figure>
                                                 <div class="recent-post-info">
                                                     <h4 class="title"><a href="data-scraping-engineering-business-case-study-2026.html">Data Scraping Engineering: A Business Case Study</a></h4>
@@ -2212,37 +2192,37 @@
     </script>
    
     <!-- Jquery -->
-    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/jquery-3.7.1.min.js" defer></script>
+    <script src="assets/js/bootstrap.min.js" defer></script>
 
     <!-- gsap js  -->
-    <script src="assets/js/gsap.min.js"></script>
-    <script src="assets/js/ScrollSmoother.js"></script>
-    <script src="assets/js/gsap-scroll-to-plugin.min.js"></script>
-    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <script src="assets/js/gsap.min.js" defer></script>
+    <script src="assets/js/ScrollSmoother.js" defer></script>
+    <script src="assets/js/gsap-scroll-to-plugin.min.js" defer></script>
+    <script src="assets/js/ScrollTrigger.min.js" defer></script>
     
 
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/marquee.min.js"></script>
-    <script src="assets/js/jquery.fancybox.js"></script>
-    <script src="assets/js/select2.min.js"></script>
-    <script src="assets/js/jquery-ui.min.js"></script>
-    <script src="assets/js/jquery.validate.min.js"></script>
-    <script src="assets/js/jquery.appear.js"></script>
-    <script src="assets/js//jquery.odometer.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <script src="assets/js/lenis.min.js"></script>
-    <script src="assets/js/splite-type.min.js"></script>
-    <script src="assets/js/vanilla-tilt.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js" defer></script>
+    <script src="assets/js/marquee.min.js" defer></script>
+    <script src="assets/js/jquery.fancybox.js" defer></script>
+    <script src="assets/js/select2.min.js" defer></script>
+    <script src="assets/js/jquery-ui.min.js" defer></script>
+    <script src="assets/js/jquery.validate.min.js" defer></script>
+    <script src="assets/js/jquery.appear.js" defer></script>
+    <script src="assets/js//jquery.odometer.min.js" defer></script>
+    <script src="assets/js/wow.min.js" defer></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js" defer></script>
+    <script src="assets/js/isotope.pkgd.min.js" defer></script>
+    <script src="assets/js/lenis.min.js" defer></script>
+    <script src="assets/js/splite-type.min.js" defer></script>
+    <script src="assets/js/vanilla-tilt.min.js" defer></script>
     
     <!-- Hover Effect Js -->
-    <script src="assets/js/three.min.js"></script>
-    <script src="assets/js/hover.js"></script>
+    <script src="assets/js/three.min.js" defer></script>
+    <script src="assets/js/hover.js" defer></script>
 
     <!-- Main Js File -->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js" defer></script>
 
 </body>
 
