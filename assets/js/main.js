@@ -1937,7 +1937,7 @@ animateCounter();
 // }
 function animateCounter() {
     let count = 0;
-    const target = 127;
+    const target = 457;
     const element = document.getElementById('counter');
 
     if (!element) return;
