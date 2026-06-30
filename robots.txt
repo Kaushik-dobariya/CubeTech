@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /index.html
+
+Sitemap: https://cubeontechs.com/sitemap.xml
