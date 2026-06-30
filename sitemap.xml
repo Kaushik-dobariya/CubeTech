@@ -106,5 +106,15 @@
         <priority>0.8</priority>
         <changefreq>monthly</changefreq>
     </url>
+    <url>
+        <loc>https://www.cubeontechs.com/privacy-policy.html</loc>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>https://www.cubeontechs.com/terms-and-condition.html</loc>
+        <priority>0.8</priority>
+        <changefreq>monthly</changefreq>
+    </url>
 
 </urlset>
