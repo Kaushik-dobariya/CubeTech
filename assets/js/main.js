@@ -1942,7 +1942,7 @@ window.addEventListener("DOMContentLoaded", function () {
 // }
 function animateCounter() {
   let count = 0;
-  const target = 1790;
+  const target = 2980;
   const element = document.getElementById("counter");
 
   if (!element) return;
@@ -1958,6 +1958,23 @@ function animateCounter() {
     element.textContent = count.toLocaleString();
   }, 20);
 }
+// function megamenuHoverEffect() {
+//   const toggle = document.querySelector(".menu-toggle");
+//   const nav = document.querySelector(".nav-links");
+
+//   toggle.addEventListener("click", () => {
+//     nav.classList.toggle("active");
+//   });
+
+//   const megaParent = document.querySelector(".mega-parent");
+
+//   megaParent.addEventListener("click", function (e) {
+//     if (window.innerWidth <= 900) {
+//       e.preventDefault();
+//       this.classList.toggle("active");
+//     }
+//   });
+// }
 
 // let count = 128547;
 // let target = element.inntererText ? parseInt(element.innerText.replace(/,/g, '')) : 2500;
