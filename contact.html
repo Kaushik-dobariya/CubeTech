@@ -488,8 +488,7 @@
                     <div class="col-lg-7">
                         <div class="contact-form">
                             <h2 class="title mt--5 mb-35">We're Here to Help</h2>
-                            <form id="contact_form" class="contact_form" method="post" action="https://formspree.io/f/mzbnjrnb">
-
+                            <form id="contact_form" class="contact_form" action="https://formspree.io/f/mzbnjrnb" method="post">
                                  <input type="hidden" name="time" value="Mar 10 2025 08:46">
                                 <div class="form-grid">
                                     <div class="form-group">
@@ -519,7 +518,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <textarea id="message" name="message" placeholder="Write Message" required></textarea>
+                                        <textarea id="message" name="message" placeholder="Write Message" required></textarea>
                                 </div>
                                  <!-- <div class="form-group">
                                      <input type="text" name="title" required>
@@ -529,10 +528,10 @@
                                     <input type="checkbox" id="terms" required>
                                     <label for="terms">I agree to all terms and conditions.</label>
                                 </div>
-                                <button type="submit" class="theme-btn  mt-30"  data-loading-text="Please wait...">
-                                    <span class="link-effect">
-                                        <span class="effect-1">Submit Now</span>
-                                        <span class="effect-1">Submit Now</span>
+                                     <button type="submit" class="theme-btn mt-30"  data-loading-text="Please wait..." name="submit">
+                                            <span class="link-effect">
+                                        <span class="effect-2">Submit Now</span>
+
                                     </span>
                                     <span class="arrow-all">
                                         <i>
@@ -544,9 +543,10 @@
                                             </svg>
                                         </i>
                                     </span>
-                                </button>
-
-                                <div id="response-message"></div>
+                                     </button>
+                                   <div class="alert alert-success" role="alert" id="response-message" style="display: none;">
+                                        Message sent successfully!
+                                    </div>
                             </form>
                         </div>
                     </div>
@@ -843,23 +843,22 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer async="false"></script>
-    <script async="false">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script >
             document.addEventListener("DOMContentLoaded", () => {
-            emailjs.init("VoKlXbf50xmn7bOtq");
+            emailjs.init("sXYK8i1ikr73ESX36");
             const form = document.getElementById("contact_form");
             if(form){
                     form.addEventListener("submit", function(event){
                         event.preventDefault();
                         emailjs.sendForm(
                                 "service_djtbskm",
-                                "template_clygfea",
+                                "template_y8ght4n",
                                 this
                             )
                             .then(function(){
 
                                 document.getElementById("response-message").innerHTML =
-
                                     "<p class='success'>Message Sent Successfully!</p>";
                                 form.reset();
                             }, function(error){
